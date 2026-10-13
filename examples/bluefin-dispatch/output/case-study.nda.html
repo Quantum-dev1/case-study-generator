@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A regional freight carrier cut morning dispatch planning from 2.5 hours to 25 minutes</title>
+<style>:root{--bg:#ffffff;--fg:#14171f;--muted:#5b6170;--accent:#025aff;--rule:#e3e6ec;--card:#f5f7fb}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--fg:#e8eaf0;--muted:#9aa1b0;--accent:#6b9bff;--rule:#262a33;--card:#171a21}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:56px 20px 80px}h1{font-size:2.1rem;line-height:1.2;margin:0 0 8px}
+.meta{color:var(--muted);margin:0 0 28px}.lead{font-size:1.2rem;font-weight:600;margin:0 0 32px}
+h2{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:40px 0 12px}
+ul{padding-left:1.2em}li{margin:6px 0}sup a{color:var(--accent);text-decoration:none;font-size:.75em;padding:0 1px}
+blockquote{margin:36px 0;padding:20px 24px;background:var(--card);border-left:4px solid var(--accent);border-radius:6px}
+blockquote p{margin:0;font-size:1.15rem}blockquote footer{margin-top:8px;color:var(--muted)}
+.notes{margin-top:56px;border-top:1px solid var(--rule);padding-top:16px;color:var(--muted);font-size:.9rem}
+.notes ol{padding-left:1.4em}.notes code{font-size:.85em}.backref{text-decoration:none;color:var(--accent)}
+@media print{body{font-size:12pt}main{padding:0}}</style>
+</head>
+<body>
+<main>
+<h1>A regional freight carrier cut morning dispatch planning from 2.5 hours to 25 minutes</h1>
+<p class="meta">Client: a regional freight carrier (name withheld under NDA) · Delivered by Lumen Works</p>
+<p class="lead">A dispatch console, a driver app and a route optimiser replaced spreadsheet planning and phone-based dispatch across 3 depots and 64 trucks.<sup><a href="#fn-1" aria-label="Source 1">1</a>,<a href="#fn-2" aria-label="Source 2">2</a>,<a href="#fn-3" aria-label="Source 3">3</a>,<a href="#fn-4" aria-label="Source 4">4</a></sup></p>
+<h2>Challenge</h2>
+<p>A regional freight carrier runs 64 trucks from 3 depots and completes about 340 deliveries per day.<sup><a href="#fn-1" aria-label="Source 1">1</a></sup> Every morning, 5 dispatchers rebuilt the next day's routes in three shared spreadsheets, a process that took about 2.5 hours and often sent trucks out late.<sup><a href="#fn-1" aria-label="Source 1">1</a></sup> Late departures cascaded into missed delivery windows: the on-time rate was 81%, and trucks ran empty on 18% of route kilometres.<sup><a href="#fn-5" aria-label="Source 5">5</a></sup> With no visibility for customers, the office fielded around 120 &quot;where is my truck?&quot; calls a day, and dispatchers spent their time on the phone instead of planning.<sup><a href="#fn-1" aria-label="Source 1">1</a>,<a href="#fn-6" aria-label="Source 6">6</a></sup> Paper proof of delivery meant disputes took days to resolve.<sup><a href="#fn-5" aria-label="Source 5">5</a></sup></p>
+<h2>Solution</h2>
+<ul>
+  <li>A web dispatch console with a drag-and-drop route board and a live map of every truck.<sup><a href="#fn-2" aria-label="Source 2">2</a>,<a href="#fn-3" aria-label="Source 3">3</a>,<a href="#fn-7" aria-label="Source 7">7</a></sup></li>
+  <li>A route optimiser that respects customer time windows and driver hours and suggests backhauls for return legs, while dispatchers keep the final say.<sup><a href="#fn-2" aria-label="Source 2">2</a>,<a href="#fn-3" aria-label="Source 3">3</a>,<a href="#fn-4" aria-label="Source 4">4</a>,<a href="#fn-8" aria-label="Source 8">8</a></sup></li>
+  <li>A driver app with photo and signature proof of delivery and an offline mode for rural routes with poor coverage.<sup><a href="#fn-2" aria-label="Source 2">2</a>,<a href="#fn-4" aria-label="Source 4">4</a>,<a href="#fn-9" aria-label="Source 9">9</a></sup></li>
+  <li>Automatic ETA messages to customers by SMS and email, with LLM-drafted text checked against a fixed template before sending.<sup><a href="#fn-2" aria-label="Source 2">2</a></sup></li>
+  <li>A pilot at one depot came first: the MVP was live after 9 weeks and all 3 depots after 14 weeks.<sup><a href="#fn-4" aria-label="Source 4">4</a>,<a href="#fn-10" aria-label="Source 10">10</a></sup></li>
+</ul>
+<h2>Results</h2>
+<ul>
+  <li>Morning planning now takes about 25 minutes for the whole fleet, down from about 2.5 hours.<sup><a href="#fn-1" aria-label="Source 1">1</a>,<a href="#fn-8" aria-label="Source 8">8</a></sup></li>
+  <li>On-time delivery rose from 81% to 94%.<sup><a href="#fn-5" aria-label="Source 5">5</a>,<a href="#fn-8" aria-label="Source 8">8</a></sup></li>
+  <li>Customer status calls fell from 120 to about 30 per day.<sup><a href="#fn-11" aria-label="Source 11">11</a>,<a href="#fn-12" aria-label="Source 12">12</a></sup></li>
+  <li>61 of 64 drivers were using the app within two weeks of the all-depot rollout.<sup><a href="#fn-4" aria-label="Source 4">4</a></sup></li>
+</ul>
+<blockquote><p>“For the first time in years, my dispatchers go home on time and the phones are quiet.”</p><footer>— Client executive<sup><a href="#fn-12" aria-label="Source 12">12</a></sup></footer></blockquote>
+<h2>Stack</h2>
+<ul>
+  <li>Next.js and TypeScript — web dispatch console<sup><a href="#fn-2" aria-label="Source 2">2</a></sup></li>
+  <li>Flutter — Android and iOS driver app<sup><a href="#fn-2" aria-label="Source 2">2</a></sup></li>
+  <li>NestJS, PostgreSQL and PostGIS — API and geospatial queries<sup><a href="#fn-2" aria-label="Source 2">2</a></sup></li>
+  <li>Python and Google OR-Tools — vehicle routing with time windows<sup><a href="#fn-2" aria-label="Source 2">2</a></sup></li>
+  <li>Docker on AWS ECS Fargate with RDS for PostgreSQL — hosting<sup><a href="#fn-3" aria-label="Source 3">3</a>,<a href="#fn-7" aria-label="Source 7">7</a></sup></li>
+</ul>
+<section class="notes" aria-label="Sources">
+<p>Every statement is linked to the project material it comes from. Numbers were verified against the sources.</p>
+<ol>
+  <li id="fn-1"><code>S10</code> · notes/discovery-notes.md, lines 5–11 — “A regional freight carrier runs 64 trucks from 3 depots and completes about 340 deliveries per day.”</li>
+  <li id="fn-2"><code>S2</code> · README.md, lines 6–14 — “`apps/console` — web dispatch console (Next.js, TypeScript). Drag-and-drop route board, live map.”</li>
+  <li id="fn-3"><code>S6</code> · history/dispatch-platform.gitlog, lines 1–17 — “2025-04-03 bc7350f feat(console): stop reassignment between trucks”</li>
+  <li id="fn-4"><code>S14</code> · notes/launch-retro.md, lines 8–13 — “Pilot at one depot first: drivers gave feedback on the app daily, and 61 of 64 drivers were using it”</li>
+  <li id="fn-5"><code>S11</code> · notes/discovery-notes.md, lines 13–18 — “1. Late departures cascade into missed delivery windows (on-time rate 81% last quarter).”</li>
+  <li id="fn-6"><code>S17</code> · transcripts/2025-02-11-kickoff-call.vtt, 00:00:04–00:01:13 — “[00:00:27] Dispatch lead: And then the phones start. Customers call to ask where their delivery is, drivers call because a stop changed. We spend the day on the phone instead of planning.”</li>
+  <li id="fn-7"><code>S3</code> · README.md, lines 16–19 — “Docker images deployed to AWS (ECS Fargate, RDS for PostgreSQL). GPS pings arrive every 30 seconds”</li>
+  <li id="fn-8"><code>S15</code> · notes/launch-retro.md, lines 15–19 — “On-time delivery rate reached 94%.”</li>
+  <li id="fn-9"><code>S12</code> · notes/discovery-notes.md, lines 20–24 — “Rural routes have poor coverage, so the driver app has to work offline.”</li>
+  <li id="fn-10"><code>S13</code> · notes/launch-retro.md, lines 1–6 — “Route optimiser and customer notifications added in weeks 10–14; all 3 depots live after 14 weeks.”</li>
+  <li id="fn-11"><code>S8</code> · metrics/kpis.csv, lines 2–6 — “metric: Customer status calls per day; before: 120; after: 30; unit: calls; measured: Jun 2025 vs Sep 2025”</li>
+  <li id="fn-12"><code>S18</code> · transcripts/2025-09-02-results-review.txt, 00:00:05–00:01:30 — “[00:00:52] Dispatch lead: Way down. We counted last week and it was about 30 a day, mostly people changing delivery instructions.”</li>
+</ol>
+</section>
+</main>
+</body>
+</html>

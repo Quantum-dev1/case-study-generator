@@ -1,0 +1,154 @@
+{
+  "title": "Bluefin Freight cut morning dispatch planning from 2.5 hours to 25 minutes",
+  "summary": {
+    "text": "A dispatch console, a driver app and a route optimiser replaced spreadsheet planning and phone-based dispatch across 3 depots and 64 trucks.",
+    "sources": [
+      "S10",
+      "S2",
+      "S6",
+      "S14"
+    ]
+  },
+  "challenge": [
+    {
+      "text": "Bluefin Freight runs 64 trucks from 3 depots and completes about 340 deliveries per day.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "text": "Every morning, 5 dispatchers rebuilt the next day's routes in three shared spreadsheets, a process that took about 2.5 hours and often sent trucks out late.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "text": "Late departures cascaded into missed delivery windows: the on-time rate was 81%, and trucks ran empty on 18% of route kilometres.",
+      "sources": [
+        "S11"
+      ]
+    },
+    {
+      "text": "With no visibility for customers, the office fielded around 120 \"where is my truck?\" calls a day, and dispatchers spent their time on the phone instead of planning.",
+      "sources": [
+        "S10",
+        "S17"
+      ]
+    },
+    {
+      "text": "Paper proof of delivery meant disputes took days to resolve.",
+      "sources": [
+        "S11"
+      ]
+    }
+  ],
+  "solution": [
+    {
+      "text": "A web dispatch console with a drag-and-drop route board and a live map of every truck.",
+      "sources": [
+        "S2",
+        "S6",
+        "S3"
+      ]
+    },
+    {
+      "text": "A route optimiser that respects customer time windows and driver hours and suggests backhauls for return legs, while dispatchers keep the final say.",
+      "sources": [
+        "S2",
+        "S14",
+        "S6",
+        "S15"
+      ]
+    },
+    {
+      "text": "A driver app with photo and signature proof of delivery and an offline mode for rural routes with poor coverage.",
+      "sources": [
+        "S2",
+        "S14",
+        "S12"
+      ]
+    },
+    {
+      "text": "Automatic ETA messages to customers by SMS and email, with LLM-drafted text checked against a fixed template before sending.",
+      "sources": [
+        "S2"
+      ]
+    },
+    {
+      "text": "A pilot at one depot came first: the MVP was live after 9 weeks and all 3 depots after 14 weeks.",
+      "sources": [
+        "S14",
+        "S13"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "text": "Morning planning now takes about 25 minutes for the whole fleet, down from about 2.5 hours.",
+      "sources": [
+        "S10",
+        "S15"
+      ]
+    },
+    {
+      "text": "On-time delivery rose from 81% to 94%.",
+      "sources": [
+        "S15",
+        "S11"
+      ]
+    },
+    {
+      "text": "Customer status calls fell from 120 to about 30 per day.",
+      "sources": [
+        "S8",
+        "S18"
+      ]
+    },
+    {
+      "text": "61 of 64 drivers were using the app within two weeks of the all-depot rollout.",
+      "sources": [
+        "S14"
+      ]
+    }
+  ],
+  "stack": [
+    {
+      "text": "Next.js and TypeScript — web dispatch console",
+      "sources": [
+        "S2"
+      ]
+    },
+    {
+      "text": "Flutter — Android and iOS driver app",
+      "sources": [
+        "S2"
+      ]
+    },
+    {
+      "text": "NestJS, PostgreSQL and PostGIS — API and geospatial queries",
+      "sources": [
+        "S2"
+      ]
+    },
+    {
+      "text": "Python and Google OR-Tools — vehicle routing with time windows",
+      "sources": [
+        "S2"
+      ]
+    },
+    {
+      "text": "Docker on AWS ECS Fargate with RDS for PostgreSQL — hosting",
+      "sources": [
+        "S3",
+        "S6"
+      ]
+    }
+  ],
+  "quote": {
+    "text": "For the first time in years, my dispatchers go home on time and the phones are quiet.",
+    "attribution": "Dana Whitfield",
+    "sources": [
+      "S18"
+    ]
+  }
+}

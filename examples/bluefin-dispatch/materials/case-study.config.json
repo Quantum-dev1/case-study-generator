@@ -1,0 +1,14 @@
+{
+  "project": "Bluefin Dispatch: dispatch console and driver app",
+  "agency": "Lumen Works",
+  "client": {
+    "name": "Bluefin Freight",
+    "aliases": ["Bluefin", "BFF"],
+    "industry": "a regional freight carrier"
+  },
+  "redact": {
+    "Dana Whitfield": "Client executive",
+    "Marco Reyes": "Dispatch lead"
+  },
+  "audience": "Operations leaders at mid-size logistics companies. Lead with the business outcome; keep it under 400 words."
+}

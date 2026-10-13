@@ -1,0 +1,422 @@
+{
+  "facts": [
+    {
+      "id": "F1",
+      "category": "challenge",
+      "statement": "5 dispatchers built the next day's routes every morning in three shared spreadsheets.",
+      "sources": [
+        "S10"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F2",
+      "category": "challenge",
+      "statement": "Morning planning took about 2.5 hours, and trucks often left late because routes were not final.",
+      "sources": [
+        "S10"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F3",
+      "category": "challenge",
+      "statement": "Drivers received their stops on a printed sheet; changes during the day went by phone call.",
+      "sources": [
+        "S10"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F4",
+      "category": "challenge",
+      "statement": "Customers had no visibility, and the office took around 120 \"where is my truck?\" calls per day.",
+      "sources": [
+        "S10"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F5",
+      "category": "challenge",
+      "statement": "Late departures cascaded into missed delivery windows; the on-time rate was 81% in the last quarter before the project.",
+      "sources": [
+        "S11"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F6",
+      "category": "challenge",
+      "statement": "Trucks returned to the depot empty on 18% of route kilometres.",
+      "sources": [
+        "S11"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F7",
+      "category": "challenge",
+      "statement": "Proof of delivery was paper-based, and disputes took days to resolve.",
+      "sources": [
+        "S11"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F8",
+      "category": "challenge",
+      "statement": "Dispatchers spent the day on the phone with customers and drivers instead of planning.",
+      "sources": [
+        "S17"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F9",
+      "category": "challenge",
+      "statement": "Half of the billing disputes were about delivery signatures nobody could find.",
+      "sources": [
+        "S17"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F10",
+      "category": "solution",
+      "statement": "A web dispatch console with a drag-and-drop route board and a live map of all trucks.",
+      "sources": [
+        "S2",
+        "S6"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F11",
+      "category": "solution",
+      "statement": "A driver app for Android and iOS with photo and signature proof of delivery and an offline mode that syncs when the signal returns.",
+      "sources": [
+        "S2",
+        "S14"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F12",
+      "category": "solution",
+      "statement": "A route optimiser that plans vehicle routes within customer time windows and driver hours, while dispatchers can still move stops by hand.",
+      "sources": [
+        "S2",
+        "S14"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F13",
+      "category": "solution",
+      "statement": "The optimiser suggests backhauls for return legs.",
+      "sources": [
+        "S6",
+        "S15"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F14",
+      "category": "solution",
+      "statement": "Customers receive ETA messages by SMS and email; the LLM-drafted text is checked against a fixed template before sending.",
+      "sources": [
+        "S2"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F15",
+      "category": "solution",
+      "statement": "The driver app sends GPS pings every 30 seconds, and positions older than 5 minutes are shown as stale.",
+      "sources": [
+        "S3"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F16",
+      "category": "solution",
+      "statement": "The rollout started with a pilot at one depot, where drivers gave feedback on the app daily.",
+      "sources": [
+        "S14"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F17",
+      "category": "result",
+      "statement": "The MVP went live at the first depot after 9 weeks, and all 3 depots were live after 14 weeks.",
+      "sources": [
+        "S13"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F18",
+      "category": "result",
+      "statement": "Morning planning is down to about 25 minutes for the whole fleet.",
+      "sources": [
+        "S15"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F19",
+      "category": "result",
+      "statement": "The on-time delivery rate reached 94%.",
+      "sources": [
+        "S15"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F20",
+      "category": "result",
+      "statement": "The empty-mile share fell to 11%.",
+      "sources": [
+        "S15"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F21",
+      "category": "result",
+      "statement": "61 of 64 drivers were using the app within two weeks of the all-depot rollout.",
+      "sources": [
+        "S14"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F22",
+      "category": "result",
+      "statement": "Customer status calls fell from 120 to 30 per day.",
+      "sources": [
+        "S8"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F23",
+      "category": "result",
+      "statement": "Customer status calls fell by 75% after launch.",
+      "sources": [
+        "S8"
+      ],
+      "approved": false,
+      "warnings": [
+        "number \"75%\" not found in cited sources"
+      ]
+    },
+    {
+      "id": "F24",
+      "category": "result",
+      "statement": "The on-time rate went from 81 to 94 percent.",
+      "sources": [
+        "S18"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F25",
+      "category": "result",
+      "statement": "Customer calls are down to about 30 a day, mostly about changing delivery instructions.",
+      "sources": [
+        "S18"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F26",
+      "category": "stack",
+      "statement": "Next.js and TypeScript for the web dispatch console.",
+      "sources": [
+        "S2"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F27",
+      "category": "stack",
+      "statement": "Flutter for the Android and iOS driver app.",
+      "sources": [
+        "S2"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F28",
+      "category": "stack",
+      "statement": "NestJS API on PostgreSQL with PostGIS for geospatial queries.",
+      "sources": [
+        "S2"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F29",
+      "category": "stack",
+      "statement": "Python service using Google OR-Tools for vehicle routing with time windows.",
+      "sources": [
+        "S2"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F30",
+      "category": "stack",
+      "statement": "Docker images on AWS ECS Fargate with RDS for PostgreSQL.",
+      "sources": [
+        "S3",
+        "S6"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F31",
+      "category": "context",
+      "statement": "Bluefin runs 64 trucks from 3 depots and completes about 340 deliveries per day.",
+      "sources": [
+        "S10"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F32",
+      "category": "context",
+      "statement": "The existing in-cab telematics units had to stay, because their contract runs until 2027.",
+      "sources": [
+        "S12"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F33",
+      "category": "context",
+      "statement": "Rural routes have poor coverage, so the driver app had to work offline.",
+      "sources": [
+        "S12"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F34",
+      "category": "context",
+      "statement": "Go-live was required before the peak season in October.",
+      "sources": [
+        "S12"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F35",
+      "category": "context",
+      "statement": "Repository history: 29 commits between 2025-02-12 and 2025-05-20 by 4 contributors.",
+      "sources": [
+        "S5"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F36",
+      "category": "context",
+      "statement": "The telematics vendor's API documentation was incomplete, which cost the team a week.",
+      "sources": [
+        "S16"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F37",
+      "category": "context",
+      "statement": "The accounting export is still a manual step and is next on the list.",
+      "sources": [
+        "S18"
+      ],
+      "approved": true,
+      "warnings": []
+    },
+    {
+      "id": "F38",
+      "category": "quote",
+      "statement": "Every morning we rebuild the same puzzle from scratch in three spreadsheets, and by the time the trucks leave it's already wrong.",
+      "sources": [
+        "S17"
+      ],
+      "approved": true,
+      "warnings": [],
+      "attribution": "Dana Whitfield"
+    },
+    {
+      "id": "F39",
+      "category": "quote",
+      "statement": "For the first time in years, my dispatchers go home on time and the phones are quiet.",
+      "sources": [
+        "S18"
+      ],
+      "approved": true,
+      "warnings": [],
+      "attribution": "Dana Whitfield"
+    },
+    {
+      "id": "F40",
+      "category": "quote",
+      "statement": "Planning is done before the first coffee now.",
+      "sources": [
+        "S18"
+      ],
+      "approved": false,
+      "warnings": [
+        "quote is not verbatim in the cited source"
+      ],
+      "attribution": "Marco Reyes"
+    }
+  ],
+  "dropped": [
+    {
+      "statement": "The project was delivered on time and on budget.",
+      "reason": "unknown source ids: S21"
+    }
+  ]
+}

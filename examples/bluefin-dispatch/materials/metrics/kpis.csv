@@ -1,0 +1,6 @@
+metric,before,after,unit,measured
+Morning route planning time,150,25,minutes,"Jun 2025 vs Sep 2025"
+On-time delivery rate,81,94,percent,"Q2 2025 vs Sep 2025"
+Customer status calls per day,120,30,calls,"Jun 2025 vs Sep 2025"
+Empty-mile share,18,11,percent of route km,"Q2 2025 vs Sep 2025"
+Driver app adoption,0,61,drivers of 64,"two weeks after rollout"

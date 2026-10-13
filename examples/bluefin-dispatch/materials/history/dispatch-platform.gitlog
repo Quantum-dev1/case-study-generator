@@ -1,0 +1,29 @@
+cfb0b0c|2025-05-20|Priya Nair|release: all depots live
+e1a5e1a|2025-05-15|Aiko Tanaka|fix(driver): signature canvas on small Android screens
+f6024e0|2025-05-13|Tomas Berg|perf(api): spatial index on stop locations
+4ae6408|2025-05-08|Priya Nair|docs: rollout plan for depots 2 and 3
+ccc3a7e|2025-05-06|Lena Ortiz|feat(console): customer notification log per stop
+210db87|2025-05-01|Aiko Tanaka|feat(notify): template guard for LLM-drafted messages
+5255956|2025-04-29|Aiko Tanaka|feat(notify): customer ETA messages by SMS and email
+ae7c980|2025-04-24|Tomas Berg|feat(optimizer): backhaul suggestions for return legs
+29ec4f8|2025-04-22|Lena Ortiz|feat(console): optimise button with manual override
+4658904|2025-04-17|Tomas Berg|feat(optimizer): driver hours constraint
+f9a5197|2025-04-15|Tomas Berg|feat(optimizer): vehicle routing with time windows (OR-Tools)
+d537d9c|2025-04-10|Priya Nair|release: MVP at first depot
+d4bafcd|2025-04-08|Tomas Berg|chore(infra): ECS Fargate services and RDS for PostgreSQL
+bc7350f|2025-04-03|Lena Ortiz|feat(console): stop reassignment between trucks
+5f1c05a|2025-04-01|Aiko Tanaka|fix(driver): sync conflicts when a stop is edited while offline
+8c3b825|2025-03-27|Priya Nair|docs: pilot runbook for the first depot
+17d0a38|2025-03-25|Lena Ortiz|feat(console): dispatcher roles and depot filter
+5b7897c|2025-03-20|Tomas Berg|fix(api): handle missing odometer field in telematics payload
+1d9dbe0|2025-03-18|Tomas Berg|feat(api): telematics polling adapter for in-cab units
+11756e3|2025-03-13|Aiko Tanaka|feat(driver): offline queue for stops, photos and signatures
+38443dd|2025-03-11|Aiko Tanaka|feat(driver): proof of delivery with photo and signature
+73478e8|2025-03-06|Lena Ortiz|feat(console): live map with stale-position indicator
+4b1f4c4|2025-03-04|Tomas Berg|feat(api): live positions websocket for the console map
+9700cf7|2025-02-27|Aiko Tanaka|feat(driver): GPS pings every 30 seconds with battery-aware throttling
+138f768|2025-02-25|Lena Ortiz|feat(console): route board with drag-and-drop stops
+f479f30|2025-02-20|Aiko Tanaka|feat(driver): login and today's stop list
+3ac2a13|2025-02-18|Tomas Berg|feat(api): import stops from daily orders CSV
+d24ff75|2025-02-14|Tomas Berg|feat(api): depots, vehicles and drivers schema with PostGIS
+2e29caa|2025-02-12|Priya Nair|chore: monorepo scaffold (console, driver, api, optimizer)

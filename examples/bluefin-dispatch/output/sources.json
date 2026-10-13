@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "config": {
+    "project": "Bluefin Dispatch: dispatch console and driver app",
+    "agency": "Lumen Works",
+    "client": {
+      "name": "Bluefin Freight",
+      "aliases": [
+        "Bluefin",
+        "BFF"
+      ],
+      "industry": "a regional freight carrier"
+    },
+    "redact": {
+      "Dana Whitfield": "Client executive",
+      "Marco Reyes": "Dispatch lead"
+    },
+    "audience": "Operations leaders at mid-size logistics companies. Lead with the business outcome; keep it under 400 words."
+  },
+  "chunks": [
+    {
+      "id": "S1",
+      "path": "README.md",
+      "kind": "doc",
+      "lineStart": 1,
+      "lineEnd": 4,
+      "text": "# Bluefin Dispatch\nDispatch console and driver app for Bluefin Freight. Replaces the spreadsheet-based morning planning\nprocess with route optimisation, live vehicle tracking and automatic customer notifications."
+    },
+    {
+      "id": "S2",
+      "path": "README.md",
+      "kind": "doc",
+      "lineStart": 6,
+      "lineEnd": 14,
+      "text": "## Components\n- `apps/console` — web dispatch console (Next.js, TypeScript). Drag-and-drop route board, live map.\n- `apps/driver` — Flutter driver app for Android and iOS. Proof of delivery with photo and signature,\n  offline mode for rural routes.\n- `services/api` — NestJS API on PostgreSQL with PostGIS for geospatial queries.\n- `services/optimizer` — Python service using Google OR-Tools (vehicle routing with time windows).\n- `services/notify` — sends customer ETA messages by SMS and email; message text is drafted by an LLM\n  from a fixed template and the live ETA, then checked against the template before sending."
+    },
+    {
+      "id": "S3",
+      "path": "README.md",
+      "kind": "doc",
+      "lineStart": 16,
+      "lineEnd": 19,
+      "text": "## Infrastructure\nDocker images deployed to AWS (ECS Fargate, RDS for PostgreSQL). GPS pings arrive every 30 seconds\nfrom the driver app; positions older than 5 minutes are shown as stale on the map."
+    },
+    {
+      "id": "S4",
+      "path": "README.md",
+      "kind": "doc",
+      "lineStart": 21,
+      "lineEnd": 24,
+      "text": "## Integrations\n- Telematics feed from the existing in-cab units (REST, polled every 60 seconds).\n- Accounting export as CSV at the end of each day."
+    },
+    {
+      "id": "S5",
+      "path": "history/dispatch-platform.gitlog (summary)",
+      "kind": "git",
+      "lineStart": 1,
+      "lineEnd": 1,
+      "text": "Repository history: 29 commits between 2025-02-12 and 2025-05-20 by 4 contributors."
+    },
+    {
+      "id": "S6",
+      "path": "history/dispatch-platform.gitlog",
+      "kind": "git",
+      "lineStart": 1,
+      "lineEnd": 17,
+      "text": "2025-05-20 cfb0b0c release: all depots live\n2025-05-15 e1a5e1a fix(driver): signature canvas on small Android screens\n2025-05-13 f6024e0 perf(api): spatial index on stop locations\n2025-05-08 4ae6408 docs: rollout plan for depots 2 and 3\n2025-05-06 ccc3a7e feat(console): customer notification log per stop\n2025-05-01 210db87 feat(notify): template guard for LLM-drafted messages\n2025-04-29 5255956 feat(notify): customer ETA messages by SMS and email\n2025-04-24 ae7c980 feat(optimizer): backhaul suggestions for return legs\n2025-04-22 29ec4f8 feat(console): optimise button with manual override\n2025-04-17 4658904 feat(optimizer): driver hours constraint\n2025-04-15 f9a5197 feat(optimizer): vehicle routing with time windows (OR-Tools)\n2025-04-10 d537d9c release: MVP at first depot\n2025-04-08 d4bafcd chore(infra): ECS Fargate services and RDS for PostgreSQL\n2025-04-03 bc7350f feat(console): stop reassignment between trucks\n2025-04-01 5f1c05a fix(driver): sync conflicts when a stop is edited while offline\n2025-03-27 8c3b825 docs: pilot runbook for the first depot\n2025-03-25 17d0a38 feat(console): dispatcher roles and depot filter"
+    },
+    {
+      "id": "S7",
+      "path": "history/dispatch-platform.gitlog",
+      "kind": "git",
+      "lineStart": 18,
+      "lineEnd": 29,
+      "text": "2025-03-20 5b7897c fix(api): handle missing odometer field in telematics payload\n2025-03-18 1d9dbe0 feat(api): telematics polling adapter for in-cab units\n2025-03-13 11756e3 feat(driver): offline queue for stops, photos and signatures\n2025-03-11 38443dd feat(driver): proof of delivery with photo and signature\n2025-03-06 73478e8 feat(console): live map with stale-position indicator\n2025-03-04 4b1f4c4 feat(api): live positions websocket for the console map\n2025-02-27 9700cf7 feat(driver): GPS pings every 30 seconds with battery-aware throttling\n2025-02-25 138f768 feat(console): route board with drag-and-drop stops\n2025-02-20 f479f30 feat(driver): login and today's stop list\n2025-02-18 3ac2a13 feat(api): import stops from daily orders CSV\n2025-02-14 d24ff75 feat(api): depots, vehicles and drivers schema with PostGIS\n2025-02-12 2e29caa chore: monorepo scaffold (console, driver, api, optimizer)"
+    },
+    {
+      "id": "S8",
+      "path": "metrics/kpis.csv",
+      "kind": "metrics",
+      "lineStart": 2,
+      "lineEnd": 6,
+      "text": "metric: Morning route planning time; before: 150; after: 25; unit: minutes; measured: Jun 2025 vs Sep 2025\nmetric: On-time delivery rate; before: 81; after: 94; unit: percent; measured: Q2 2025 vs Sep 2025\nmetric: Customer status calls per day; before: 120; after: 30; unit: calls; measured: Jun 2025 vs Sep 2025\nmetric: Empty-mile share; before: 18; after: 11; unit: percent of route km; measured: Q2 2025 vs Sep 2025\nmetric: Driver app adoption; before: 0; after: 61; unit: drivers of 64; measured: two weeks after rollout"
+    },
+    {
+      "id": "S9",
+      "path": "notes/discovery-notes.md",
+      "kind": "doc",
+      "lineStart": 1,
+      "lineEnd": 3,
+      "text": "# Discovery notes — Bluefin Freight\nWeek 1–2 discovery, on site at the main depot."
+    },
+    {
+      "id": "S10",
+      "path": "notes/discovery-notes.md",
+      "kind": "doc",
+      "lineStart": 5,
+      "lineEnd": 11,
+      "text": "## How dispatch works today\n- Bluefin runs 64 trucks from 3 depots and completes about 340 deliveries per day.\n- 5 dispatchers build the next day's routes every morning in three shared spreadsheets.\n- Morning planning takes about 2.5 hours; trucks often leave late because routes are not final.\n- Drivers get their stops as a printed sheet. Changes during the day go by phone call.\n- Customers have no visibility. The office takes around 120 \"where is my truck?\" calls per day."
+    },
+    {
+      "id": "S11",
+      "path": "notes/discovery-notes.md",
+      "kind": "doc",
+      "lineStart": 13,
+      "lineEnd": 18,
+      "text": "## Pain points named by the client\n1. Late departures cascade into missed delivery windows (on-time rate 81% last quarter).\n2. Empty miles: trucks return to the depot empty on 18% of route kilometres.\n3. Dispatchers cannot see where trucks are without calling the driver.\n4. Proof of delivery is paper-based; disputes take days to resolve."
+    },
+    {
+      "id": "S12",
+      "path": "notes/discovery-notes.md",
+      "kind": "doc",
+      "lineStart": 20,
+      "lineEnd": 24,
+      "text": "## Constraints\n- Must keep the existing in-cab telematics units (contract runs until 2027).\n- Rural routes have poor coverage, so the driver app has to work offline.\n- Go-live before the peak season in October."
+    },
+    {
+      "id": "S13",
+      "path": "notes/launch-retro.md",
+      "kind": "doc",
+      "lineStart": 1,
+      "lineEnd": 6,
+      "text": "# Launch retrospective\n## Timeline\n- Kickoff 11 February 2025. MVP (console + driver app, manual routing) live at the first depot after 9 weeks.\n- Route optimiser and customer notifications added in weeks 10–14; all 3 depots live after 14 weeks."
+    },
+    {
+      "id": "S14",
+      "path": "notes/launch-retro.md",
+      "kind": "doc",
+      "lineStart": 8,
+      "lineEnd": 13,
+      "text": "## What went well\n- Pilot at one depot first: drivers gave feedback on the app daily, and 61 of 64 drivers were using it\n  within two weeks of the all-depot rollout.\n- The optimiser respects customer time windows and driver hours; dispatchers can still drag stops by hand.\n- Offline mode: stops, signatures and photos are queued on the phone and synced when the signal returns."
+    },
+    {
+      "id": "S15",
+      "path": "notes/launch-retro.md",
+      "kind": "doc",
+      "lineStart": 15,
+      "lineEnd": 19,
+      "text": "## Numbers after the first full month (September 2025)\n- Morning planning is down to about 25 minutes for the whole fleet.\n- On-time delivery rate reached 94%.\n- Empty-mile share fell to 11% thanks to backhaul suggestions in the optimiser."
+    },
+    {
+      "id": "S16",
+      "path": "notes/launch-retro.md",
+      "kind": "doc",
+      "lineStart": 21,
+      "lineEnd": 23,
+      "text": "## What we would do differently\n- Start the telematics integration earlier; the vendor API documentation was incomplete and cost us a week."
+    },
+    {
+      "id": "S17",
+      "path": "transcripts/2025-02-11-kickoff-call.vtt",
+      "kind": "transcript",
+      "lineStart": 5,
+      "lineEnd": 25,
+      "text": "[00:00:04] Priya Nair: Thanks for making the time. Can you walk us through a typical morning in dispatch?\n[00:00:12] Dana Whitfield: Sure. Every morning we rebuild the same puzzle from scratch in three spreadsheets, and by the time the trucks leave it's already wrong.\n[00:00:27] Marco Reyes: And then the phones start. Customers call to ask where their delivery is, drivers call because a stop changed. We spend the day on the phone instead of planning.\n[00:00:42] Priya Nair: If this project is a success a year from now, what has changed?\n[00:00:56] Dana Whitfield: Trucks leave on time, customers know when we're coming without calling us, and my dispatchers stop being human GPS trackers.\n[00:01:13] Marco Reyes: And no more paper. Half our billing disputes are about a signature nobody can find.",
+      "timeRange": "00:00:04–00:01:13"
+    },
+    {
+      "id": "S18",
+      "path": "transcripts/2025-09-02-results-review.txt",
+      "kind": "transcript",
+      "lineStart": 1,
+      "lineEnd": 8,
+      "text": "[00:00:05] Priya Nair: We pulled the numbers for the first full month after rollout. Want to start with planning time?\n[00:00:14] Marco Reyes: Honestly I don't need the report for that. We used to start at six and finish around half past eight. Now it's done before the first coffee.\n[00:00:31] Dana Whitfield: The on-time rate is what the board looks at, and it went from 81 to 94 percent.\n[00:00:47] Priya Nair: And the customer calls?\n[00:00:52] Marco Reyes: Way down. We counted last week and it was about 30 a day, mostly people changing delivery instructions.\n[00:01:10] Dana Whitfield: For the first time in years, my dispatchers go home on time and the phones are quiet.\n[00:01:24] Priya Nair: Anything that is still not working well?\n[00:01:30] Marco Reyes: The accounting export is still a manual step. That's next on our list.",
+      "timeRange": "00:00:05–00:01:30"
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "checked": 23,
+  "ok": 20,
+  "recited": 1,
+  "removed": 2,
+  "numbersChecked": 27,
+  "claims": [
+    {
+      "section": "summary",
+      "text": "A dispatch console, a driver app and a route optimiser replaced spreadsheet planning and phone-based dispatch across 3 depots and 64 trucks.",
+      "status": "ok",
+      "numbers": [
+        "3",
+        "64"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S10",
+        "S2",
+        "S6",
+        "S14"
+      ],
+      "sourcesAfter": [
+        "S10",
+        "S2",
+        "S6",
+        "S14"
+      ]
+    },
+    {
+      "section": "challenge",
+      "text": "A regional freight carrier runs 64 trucks from 3 depots and completes about 340 deliveries per day.",
+      "status": "ok",
+      "numbers": [
+        "64",
+        "3",
+        "340"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S10"
+      ],
+      "sourcesAfter": [
+        "S10"
+      ]
+    },
+    {
+      "section": "challenge",
+      "text": "Every morning, 5 dispatchers rebuilt the next day's routes in three shared spreadsheets, a process that took about 2.5 hours and often sent trucks out late.",
+      "status": "ok",
+      "numbers": [
+        "5",
+        "2.5"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S10"
+      ],
+      "sourcesAfter": [
+        "S10"
+      ]
+    },
+    {
+      "section": "challenge",
+      "text": "Late departures cascaded into missed delivery windows: the on-time rate was 81%, and trucks ran empty on 18% of route kilometres.",
+      "status": "ok",
+      "numbers": [
+        "81%",
+        "18%"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S11"
+      ],
+      "sourcesAfter": [
+        "S11"
+      ]
+    },
+    {
+      "section": "challenge",
+      "text": "With no visibility for customers, the office fielded around 120 \"where is my truck?\" calls a day, and dispatchers spent their time on the phone instead of planning.",
+      "status": "ok",
+      "numbers": [
+        "120"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S10",
+        "S17"
+      ],
+      "sourcesAfter": [
+        "S10",
+        "S17"
+      ]
+    },
+    {
+      "section": "challenge",
+      "text": "Paper proof of delivery meant disputes took days to resolve.",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S11"
+      ],
+      "sourcesAfter": [
+        "S11"
+      ]
+    },
+    {
+      "section": "solution",
+      "text": "A web dispatch console with a drag-and-drop route board and a live map of every truck.",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2",
+        "S6",
+        "S3"
+      ],
+      "sourcesAfter": [
+        "S2",
+        "S6",
+        "S3"
+      ]
+    },
+    {
+      "section": "solution",
+      "text": "A route optimiser that respects customer time windows and driver hours and suggests backhauls for return legs, while dispatchers keep the final say.",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2",
+        "S14",
+        "S6",
+        "S15"
+      ],
+      "sourcesAfter": [
+        "S2",
+        "S14",
+        "S6",
+        "S15"
+      ]
+    },
+    {
+      "section": "solution",
+      "text": "A driver app with photo and signature proof of delivery and an offline mode for rural routes with poor coverage.",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2",
+        "S14",
+        "S12"
+      ],
+      "sourcesAfter": [
+        "S2",
+        "S14",
+        "S12"
+      ]
+    },
+    {
+      "section": "solution",
+      "text": "Automatic ETA messages to customers by SMS and email, with LLM-drafted text checked against a fixed template before sending.",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2"
+      ],
+      "sourcesAfter": [
+        "S2"
+      ]
+    },
+    {
+      "section": "solution",
+      "text": "A pilot at one depot came first: the MVP was live after 9 weeks and all 3 depots after 14 weeks.",
+      "status": "ok",
+      "numbers": [
+        "9",
+        "3",
+        "14"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S14",
+        "S13"
+      ],
+      "sourcesAfter": [
+        "S14",
+        "S13"
+      ]
+    },
+    {
+      "section": "results",
+      "text": "Morning planning now takes about 25 minutes for the whole fleet, down from about 2.5 hours.",
+      "status": "ok",
+      "numbers": [
+        "25",
+        "2.5"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S10",
+        "S15"
+      ],
+      "sourcesAfter": [
+        "S10",
+        "S15"
+      ]
+    },
+    {
+      "section": "results",
+      "text": "Planning is 83% faster than before.",
+      "status": "removed",
+      "numbers": [
+        "83%"
+      ],
+      "unsupported": [
+        "83%"
+      ],
+      "sourcesBefore": [
+        "S15"
+      ],
+      "sourcesAfter": [],
+      "reason": "number \"83%\" not found in any source"
+    },
+    {
+      "section": "results",
+      "text": "On-time delivery rose from 81% to 94%.",
+      "status": "recited",
+      "numbers": [
+        "81%",
+        "94%"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S15"
+      ],
+      "sourcesAfter": [
+        "S15",
+        "S11"
+      ],
+      "reason": "\"81%\" found in S11, citation added"
+    },
+    {
+      "section": "results",
+      "text": "Customer status calls fell from 120 to about 30 per day.",
+      "status": "ok",
+      "numbers": [
+        "120",
+        "30"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S8",
+        "S18"
+      ],
+      "sourcesAfter": [
+        "S8",
+        "S18"
+      ]
+    },
+    {
+      "section": "results",
+      "text": "The empty-mile share fell from 18% to 11%, saving an estimated $210,000 a year in fuel.",
+      "status": "removed",
+      "numbers": [
+        "18%",
+        "11%",
+        "$210,000"
+      ],
+      "unsupported": [
+        "$210,000"
+      ],
+      "sourcesBefore": [
+        "S15"
+      ],
+      "sourcesAfter": [],
+      "reason": "number \"$210,000\" not found in any source"
+    },
+    {
+      "section": "results",
+      "text": "61 of 64 drivers were using the app within two weeks of the all-depot rollout.",
+      "status": "ok",
+      "numbers": [
+        "61",
+        "64"
+      ],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S14"
+      ],
+      "sourcesAfter": [
+        "S14"
+      ]
+    },
+    {
+      "section": "stack",
+      "text": "Next.js and TypeScript — web dispatch console",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2"
+      ],
+      "sourcesAfter": [
+        "S2"
+      ]
+    },
+    {
+      "section": "stack",
+      "text": "Flutter — Android and iOS driver app",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2"
+      ],
+      "sourcesAfter": [
+        "S2"
+      ]
+    },
+    {
+      "section": "stack",
+      "text": "NestJS, PostgreSQL and PostGIS — API and geospatial queries",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2"
+      ],
+      "sourcesAfter": [
+        "S2"
+      ]
+    },
+    {
+      "section": "stack",
+      "text": "Python and Google OR-Tools — vehicle routing with time windows",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S2"
+      ],
+      "sourcesAfter": [
+        "S2"
+      ]
+    },
+    {
+      "section": "stack",
+      "text": "Docker on AWS ECS Fargate with RDS for PostgreSQL — hosting",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S3",
+        "S6"
+      ],
+      "sourcesAfter": [
+        "S3",
+        "S6"
+      ]
+    },
+    {
+      "section": "quote",
+      "text": "For the first time in years, my dispatchers go home on time and the phones are quiet.",
+      "status": "ok",
+      "numbers": [],
+      "unsupported": [],
+      "sourcesBefore": [
+        "S18"
+      ],
+      "sourcesAfter": [
+        "S18"
+      ]
+    }
+  ]
+}
