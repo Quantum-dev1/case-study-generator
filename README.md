@@ -98,7 +98,7 @@ node dist/bin.js write ./my-project-out
 node dist/bin.js write ./my-project-out --nda    # optional redacted copy
 ```
 
-Once published to npm the binary is `case-study` (`npx case-study-generator ...`).
+Run it straight from GitHub without cloning: `npx -y github:Quantum-dev1/case-study-generator --help` (the binary is `case-study`).
 
 ## Configuration
 

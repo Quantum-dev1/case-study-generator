@@ -25,7 +25,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "examples": "npm run build && sh examples/regenerate.sh",
-    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [
     "case-study",
