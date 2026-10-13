@@ -1,0 +1,58 @@
+{
+  "name": "case-study-generator",
+  "version": "0.1.0",
+  "description": "Turn raw project materials into a client-ready case study where every claim cites its source and every number is fact-checked.",
+  "type": "module",
+  "bin": {
+    "case-study": "dist/bin.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "examples": "npm run build && sh examples/regenerate.sh",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "case-study",
+    "llm",
+    "fact-checking",
+    "citations",
+    "content-generation",
+    "openai-compatible",
+    "cli",
+    "grounding"
+  ],
+  "author": "Quantum Dev (https://quantumdevteam.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quantum-dev1/case-study-generator.git"
+  },
+  "homepage": "https://github.com/Quantum-dev1/case-study-generator#readme",
+  "bugs": {
+    "url": "https://github.com/Quantum-dev1/case-study-generator/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.4"
+  }
+}
